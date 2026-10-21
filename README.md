@@ -93,17 +93,48 @@ Xem chạy kiểm thử trên CI ở tab **Actions** của repository.
 
 ## 8. Kết quả thực hiện
 
-**Đã hoàn thiện:** Mã nguồn Python cho 06 test case Selenium, fixture pytest, danh sách thư viện cần cài, GitHub Actions và báo cáo này.
+Đã chạy tự động bằng GitHub Actions ngày **21/10/2026** và kiểm tra log kết quả.
 
-**Chưa xác minh:** Kết quả thực thi thực tế trên Chrome/GitHub Actions. Không mặc định đánh dấu PASS khi chưa có log.
-
-| Thông tin | Kết quả |
+| Thông tin | Kết quả thực tế |
 |---|---|
-| Ngày kiểm thử | Chưa cập nhật |
-| Chrome / Python | Chưa cập nhật |
-| Số test đã chạy | Chưa cập nhật |
-| PASSED / FAILED | Chưa cập nhật |
-| Link log hoặc hình ảnh minh chứng | Chưa cập nhật |
+| Môi trường | GitHub Actions, Ubuntu Linux (runner `ubuntu-latest`) |
+| Python | 3.11.17 |
+| pytest | 9.1.1 |
+| Selenium | 4.51.0 |
+| Trình duyệt | Google Chrome, chế độ headless; log không ghi rõ phiên bản Chrome |
+| Tổng số test | **06** |
+| PASSED | **06** |
+| FAILED | **00** |
+| Thời gian kiểm thử | **21.71 giây** |
+| Trạng thái GitHub Actions | **Success** |
+| Minh chứng | [Xem workflow run #2](https://github.com/AChingNoLu/selenium-automation-testing./actions/runs/39539721718) |
+
+### 8.1. Kết quả từng test case
+
+| ID | Test case | Kết quả |
+|---|---|---|
+| TC01 | Đăng nhập thành công | **PASSED** |
+| TC02 | Đăng nhập sai mật khẩu | **PASSED** |
+| TC03 | Thêm sản phẩm vào giỏ hàng | **PASSED** |
+| TC04 | Xóa sản phẩm khỏi giỏ hàng | **PASSED** |
+| TC05 | Sắp xếp sản phẩm theo giá tăng dần | **PASSED** |
+| TC06 | Đăng xuất | **PASSED** |
+
+### 8.2. Log tổng kết
+
+```text
+collected 6 items
+tests/test_saucedemo.py::test_01_login_success PASSED
+tests/test_saucedemo.py::test_02_login_wrong_password PASSED
+tests/test_saucedemo.py::test_03_add_product_to_cart PASSED
+tests/test_saucedemo.py::test_04_remove_product_from_cart PASSED
+tests/test_saucedemo.py::test_05_sort_products_price_low_to_high PASSED
+tests/test_saucedemo.py::test_06_logout PASSED
+
+============================== 6 passed in 21.71s ==============================
+```
+
+**Đánh giá:** 100% test case trong phạm vi bài thực hành đạt kết quả mong đợi trong lần chạy được dẫn chứng. Đây là kết quả chạy CI, không phải xác nhận đã chạy trên máy cá nhân.
 
 ## 9. Nhận xét và hạn chế
 
@@ -114,6 +145,6 @@ Xem chạy kiểm thử trên CI ở tab **Actions** của repository.
 
 ## 10. Kết luận
 
-Bài thực hành triển khai 06 kịch bản kiểm thử tự động bằng Selenium cho SauceDemo, đáp ứng yêu cầu tối thiểu 05 test case. Sau khi chạy thử, sinh viên bổ sung kết quả thực tế và hình ảnh hoặc link Actions, điền thông tin cá nhân trước khi nộp.
+Bài thực hành triển khai 06 kịch bản kiểm thử tự động bằng Selenium cho SauceDemo, đáp ứng yêu cầu tối thiểu 05 test case. Đã ghi nhận minh chứng và kết quả thực chạy trên GitHub Actions; sinh viên cần bổ sung thông tin cá nhân trước khi nộp.
 
 **Link nộp:** https://github.com/AChingNoLu/selenium-automation-testing.
